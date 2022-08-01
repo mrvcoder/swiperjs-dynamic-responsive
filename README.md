@@ -51,20 +51,16 @@ to use this code you should first add our function in your project then you shou
 ```
 export function MySlider(){
 
-  let [space , max] = MakeResponsiveSliders(document.querySelector('.podcasts_foryou_sliders'),
+  let [space , max] = MakeResponsiveSliders(document.querySelector('.mySwiper'),
   {
     margin:20
   }
   )
 
-  let swiper = new Swiper(".podcasts_foryou_sliders", {
+  let swiper = new Swiper(".mySwiper", {
     slidesPerView:'auto',
     spaceBetween: space,
-    centeredSlides: false,
-      navigation: {
-        nextEl: ".podcasts_foryou_sliders-button-next",
-        prevEl: ".podcasts_foryou_sliders-button-prev",
-      },
+    centeredSlides: false
     });
 
   swiper.snapGrid[swiper.snapGrid.length-1]=swiper.snapGrid[swiper.snapGrid.length-1]+space
