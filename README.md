@@ -49,7 +49,7 @@ export function MySlider(){
 to use this code you should first add our function in your project then you should change the previues code to this :
 
 ```
-export function podcasts_foryou(){
+export function MySlider(){
 
   let [space , max] = MakeResponsiveSliders(document.querySelector('.podcasts_foryou_sliders'),
   {
