@@ -1,4 +1,8 @@
 function MakeResponsiveSliders(slider_container,minimal){
+
+  if(!slider_container)
+   throw new Error('pass slider_container parameter !');
+   
   let paddings = {
     left : parseFloat(window.getComputedStyle(slider_container, null).getPropertyValue('padding-left').split('px')[0]) ,
     right : parseFloat(window.getComputedStyle(slider_container, null).getPropertyValue('padding-right').split('px')[0])
@@ -12,9 +16,8 @@ function MakeResponsiveSliders(slider_container,minimal){
 
   // get max slides that can viewable inside slider_container
   for(let i=1;i<sliders.length+1;i++){
-    let m = minimal.margin*i
-    let w = slider_w*i
-    if(w+m <width){
+    let slide = ((minimal.margin*2)+slider_w)*i
+    if(slide <width){
           max_sliders_veiw+=1
     }else{
       break;
